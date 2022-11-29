@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">JustDoIT</string>
+    <string name="hintText">Напиши задачу, все равно не сделаешь</string>
+    <string name="rbLow">Low</string>
+    <string name="rbMedium">Medium</string>
+    <string name="rbHigh">High</string>
+    <string name="bSave">Сохранить</string>
+    <string name="text_prioritet">Ну выбери приоритет тогда уж:</string>
+</resources>
