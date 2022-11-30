@@ -20,6 +20,8 @@ public class AddNoteActivity extends AppCompatActivity {
     private  RadioButton radioButtonHigh;
     private Button buttonSave;
 
+    private Database database = Database.getInstance();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -47,6 +49,11 @@ public class AddNoteActivity extends AppCompatActivity {
         // добавить потом проверку на пустое значение
         String text = editTextNote.getText().toString().trim();
         int priority = getPriority();
+        int id = database.getNotes().size();
+        Note note = new Note(id, text, priority);
+        database.add(note);
+
+        finish();
     }
     private int getPriority(){
         int priority;

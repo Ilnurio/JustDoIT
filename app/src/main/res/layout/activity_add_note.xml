@@ -17,6 +17,8 @@
         android:inputType="text"
         android:padding="8dp"
         android:text=""
+        android:textColor="@color/white"
+        android:textStyle="bold"
         android:textColorHint="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
