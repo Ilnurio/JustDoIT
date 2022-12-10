@@ -19,7 +19,7 @@ public class AddNoteActivity extends AppCompatActivity {
     private RadioGroup radio_group;
     private RadioButton radioButtonLow;
     private RadioButton radioButtonMedium;
-    private  RadioButton radioButtonHigh;
+    private RadioButton radioButtonHigh;
     private Button buttonSave;
 
     private NoteDatabase noteDatabase;
@@ -41,7 +41,7 @@ public class AddNoteActivity extends AppCompatActivity {
         });
     }
 
-    private void initViews(){
+    private void initViews() {
         editTextNote = findViewById(R.id.editTextNote);
         radio_group = findViewById(R.id.radio_group);
         radioButtonLow = findViewById(R.id.radioButtonLow);
@@ -49,7 +49,8 @@ public class AddNoteActivity extends AppCompatActivity {
         radioButtonHigh = findViewById(R.id.radioButtonHigh);
         buttonSave = findViewById(R.id.buttonSave);
     }
-    private void saveNote(){
+
+    private void saveNote() {
         // добавить потом проверку на пустое значение
         String text = editTextNote.getText().toString().trim();
         int priority = getPriority();
@@ -69,11 +70,12 @@ public class AddNoteActivity extends AppCompatActivity {
         });
         thread.start();
     }
-    private int getPriority(){
+
+    private int getPriority() {
         int priority;
-        if(radioButtonLow.isChecked()){
+        if (radioButtonLow.isChecked()) {
             priority = 0;
-        } else if (radioButtonMedium.isChecked()){
+        } else if (radioButtonMedium.isChecked()) {
             priority = 1;
         } else {
             priority = 2;
@@ -81,7 +83,7 @@ public class AddNoteActivity extends AppCompatActivity {
         return priority;
     }
 
-    public static Intent newIntent(Context context){
+    public static Intent newIntent(Context context) {
         return new Intent(context, AddNoteActivity.class);
     }
 }
